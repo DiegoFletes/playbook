@@ -23,7 +23,7 @@ const myModule = (() => {
    	publicBaz: baz
  }
 
-// Exposición de variables locales
+// Exposición de variables locales variables
  return exported
 })()
 
