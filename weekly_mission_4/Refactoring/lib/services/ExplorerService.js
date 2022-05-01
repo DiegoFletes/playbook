@@ -1,13 +1,3 @@
-// Clase anterior con la que obtenemos los explorers
-const Reader = require("./lib/utils/Reader");
-const explorers = Reader.readJsonFile("explorers.json");
-
-// Aplicación del ExplorerService sobre la lista de explorers
-ExplorerService.filterByMission(explorers, "node");
-ExplorerService.getAmountOfExplorersByMission(explorers, "node");
-ExplorerService.getExplorersUsernamesByMission(explorers, "node");
-
-// exports a class
 export class ExplorerService {
     constructor () {
       this.filterByMission = filterByMission
@@ -15,3 +5,20 @@ export class ExplorerService {
       this.getExplorersUsernamesByMission = getExplorersUsernamesByMission
     }
 }
+
+class ExplorerService{
+    static filterByMission(explorers, mission){
+        const explorerByMission = explorers.filter((explorer) => explorer.mission === mission)
+        return this.filterByMission
+    }
+    static getAmountOfExplorersByMission(explorers, mission){
+        //const explorerAmount = explorers.filter((explorer) => explorer.mission === mission)
+        return this.getAmountOfExplorersByMission
+    }
+    static getExplorersUsernamesByMission(explorers, mission){
+
+    }
+}
+
+
+module.exports = ExplorerService

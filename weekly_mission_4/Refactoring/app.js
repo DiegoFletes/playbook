@@ -1,6 +1,5 @@
-const fs = require("fs");
-const Reader = require("./lib/utils/Reader");
-const explorers = Reader.require("./explorers.json"); // esto regresa la lista de explorers del archivo
+
+
 
 
 // Part 2: Get the quantity of explorers names in node
