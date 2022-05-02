@@ -13,6 +13,4 @@ class ExplorerService{
         return usernamesInNode
     }
 }
-
-
 module.exports = ExplorerService
