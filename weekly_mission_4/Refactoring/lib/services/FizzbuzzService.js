@@ -1,6 +1,6 @@
 class FizzbuzzService{
     static applyValidationInExplorer(explorers){
-        const explorerByMission = explorers.filter((explorer) => {
+        explorers.filter((explorer) => {
         if(explorer.score%3 === 0 && explorer.score%5 === 0 ){
             explorer.trick = "FIZZBUZZ";
         } else if(explorer.score%3 === 0){
@@ -10,7 +10,9 @@ class FizzbuzzService{
         } else{
             explorer.trick = explorer.score;
         }})
-        return explorers;
+        //const fizzbuzz = explorers.map((explorer) => {explorer.githubUsername, explorer.score, explorer.trick);
+        //return fizzbuzz;
+        return explorers
     }
 }
 module.exports = FizzbuzzService
