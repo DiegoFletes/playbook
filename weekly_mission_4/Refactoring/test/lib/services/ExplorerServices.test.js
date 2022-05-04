@@ -1,9 +1,11 @@
-const Reader = require("./lib/utils/Reader");
+const ExplorerService = require( "./../../../lib/services/ExplorerService");
 
 describe("Unit Tests explorer services", () => {
 
   test('1) Create empty object', () => {
-    const explorerByMission = explorers.filter((explorer) => explorer.mission === "node" );
-    expect(explorerByMission).toBeUndefined("node")
+    const explorers = [{mission : "node"}];
+    const explorersInNode = ExplorerService.filterByMission(explorers, "node");
+    expect(explorersInNode.length).toBe(1);
+  });
 
-  })})
+})
