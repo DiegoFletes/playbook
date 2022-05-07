@@ -6,20 +6,21 @@ class ExplorerController{
 
     static getExplorersByMission(mission){
         const explorers = Reader.readJsonFile("./explorers.json");
-        const Bymission = explorers.filter((explorer) => explorer.mission === mission, );
-        return Bymission;
+        return ExplorerService.filterByMission(explorers, mission);
     }
 
     static getExplorerssUsernameByMission(mission){
         const explorers = Reader.readJsonFile("./explorers.json");
-        const Username = explorers.filter((explorer) => explorer.name === mission, );
-        return Username;
+        return ExplorerService.getExplorersUsernamesByMission(explorers, mission);
     }
 
     static getExplorersAmonutByMission(mission){
         const explorers = Reader.readJsonFile("./explorers.json");
-        const Amount = explorers.length((explorer) => explorer.name === mission, );
-        return Amount;
+        return ExplorerService.getAmountOfExplorersByMission(explorers,mission);
+    }
+
+    static getFizzbuzzStatus(number){
+        return FizzbuzzService.applyValidationInExplorer(number);
     }
     
 }
